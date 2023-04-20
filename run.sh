@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-javac --enable-preview -source 20 Test.java && java --enable-preview Test; rm *.class
+javac --enable-preview -source 20 Main.java && java --enable-preview Main; rm *.class

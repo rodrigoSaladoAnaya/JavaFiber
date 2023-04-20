@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-public class Test {
+public class Main {
 
   private static final Consumer<String> log = System.out::println;
 
