@@ -1,8 +1,8 @@
+import java.time.Duration;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
 public class Fiber {
-
 
   public static void await(CompletableFuture<?>... futures) {
     if (!Thread.currentThread().isVirtual()) {
@@ -24,9 +24,9 @@ public class Fiber {
     return future;
   }
 
-  public static void sleep(int seconds) {
+  public static void sleep(Duration duration) {
     try {
-      Thread.sleep(2000);
+      Thread.sleep(duration);
     } catch (InterruptedException e) {
       throw new RuntimeException(e);
     }

@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -25,7 +26,7 @@ public class Test {
   private static CompletableFuture<Integer> callExternalWS(String label) {
     return Fiber.async(() -> {
       log.accept(String.format("[%s] Running -> %s", Thread.currentThread(), label));
-      Fiber.sleep(2000);
+      Fiber.sleep(Duration.ofSeconds(2));
       return new Random().nextInt(100);
     });
   }
