@@ -20,7 +20,7 @@ public class Main {
         , result));
       return result;
     });
-    main.get();
+    log.accept("END: " + main.get());
   }
 
   private static CompletableFuture<Integer> callExternalWS(String label) {

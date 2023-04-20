@@ -16,7 +16,8 @@ public class Fiber {
     Thread.ofVirtual()
       .start(() -> {
         try {
-          future.complete(callable.call());
+          var call = callable.call();
+          future.complete(call);
         } catch (Exception e) {
           future.completeExceptionally(e);
         }
